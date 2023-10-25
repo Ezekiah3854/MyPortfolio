@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <p>Zack</p>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#services">Portfolio</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header_text">
+                <p>UI/UX designer</p>
+                <h1>Hi, I'm <span>zack</span> <br>Elitee from california, US</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="aboutMe.avif" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I am a software engineer with expertise in Java, Python, C++, and JavaScript. Proficient in web development using React and Node.js, as well as database management with SQL, MySQL, and MongoDB. My experience includes software design, Agile methodologies, and working collaboratively across teams. I hold a B.Sc. in Computer Science from Strathmore University. As a Software Engineer at Google, I led the development of web applications, deployed them on AWS, and ensured cross-functional collaboration. Additionally, during my Software Developer Internship at Google, I built a real-time chat application, participated in Agile processes, and contributed to API development. Notable projects in my portfolio include a feature-rich e-commerce website and an efficient inventory management system.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing web/App itnerfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App development</span><br>Building Android/iOS apps</li>
+
+                        </ul>
+                    </div><div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Current</span><br>UI/UX Design Training at MIT</li>
+                            <li><span>2019- 2021</span><br>Project manager at StarApp LLC</li>
+                            <li><span>2018 - 2019</span><br>Internship at Safaricom</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017</span><br>Computer Science at Strathmore University</li>
+                            <li><span>2019</span><br>MBsc from MIT</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My projects</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Calculator App</h2>
+                    <p>My calculator app processes mathematical operations entered by users via a user-friendly interface. It interprets user input, follows the order of operations, and evaluates expressions to produce results. The app may also feature memory functions and additional mathematical operations, enhancing its utility for a wide range of calculations.</p>
+                    <a href="calc.html">See how the calculator operates</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Exchange rate App</h2>
+                    <p>My currency exchange rate app allows users to convert between different currencies. Users input an amount in one currency and select the target currency, and the app retrieves and displays the current exchange rate. It then calculates and shows the equivalent amount in the chosen currency, helping users make international financial transactions or budget for travel and investments efficiently.</p>
+                    <a href="currencyConv.html">View the exchange rate</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Tic Tac Toe App</h2>
+                    <p>My Tic-Tac-Toe app is a two-player game where users take turns to place their symbols, typically "X" and "O," on a 3x3 grid. The app tracks the game state, checks for winning conditions (when a player gets three of their symbols in a row, column, or diagonal), and allows players to compete. It offers a simple and engaging way to pass the time and test strategic thinking.</p>
+                    <a href="ticTac.html">Try playing the game</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <section class="contact">
+                <h2>Contact</h2>
+                <p><span>Email</span>: nyagwayaezekiah@gmail.com</p>
+                <p><span>Phone</span>: +(254) 70-591-8376</p>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2023 Ezekiah Nyagwaya
+    </footer>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+
+        }
+
+    </script>
+</body>
+</html>

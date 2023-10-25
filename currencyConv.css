@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    color: #3d3d3d;
+    background-color: #00659c;
+    font-family: "poppins";
+}
+
+.container {
+    width: 400px;
+    min-height: 350px;
+    background: #fff;
+    padding: 10px 25px 30px 25px;
+    display: flex;
+    flex-direction: column ;
+    border-radius: 25px;
+    box-shadow: -5px -5px 15px #000074;
+}
+
+.container p{
+    margin-top: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #a8a8a8;
+    text-align: center;
+}
+
+.container #rate {
+    font-size: 35px;
+    color: #3d3d3d;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.container label {
+    font-size: 12px;
+    text-transform: capitalize;
+    margin-bottom: 3px;
+}
+
+.container input {
+      font-size: 25px;  
+      padding: 5px 20px;
+      outline: none;
+      border-radius: 25px;
+      border: 1px solid #a8a8a8;
+
+}
+
+.container input:focus {
+    background-color: #00659c;
+}
+
+.container .from-to {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+
+.from-to .select {
+    height: 40px;
+    width: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #a8a8a8;
+
+
+}
+
+.from-to .select:hover,
+.from-to .select.active {
+    border-color: #4392fe;
+}
+
+.from-to .select i{
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.from-to .select.active i {
+    transform: rotate(180deg);
+}
+
+.from-to .select.active ul {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.from-to .select ul {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s;
+    border: 1px solid #a8a8a8;
+}
+
+.from-to .select ul li {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px solid #7ab8b0;
+    text-transform: capitalize;
+    /* transition: background 0.3s; */
+
+}
+
+.from-to.select ul li:hover {
+    background-color: #1b6d63;
+}
+
+.from-to.select ul li.active {
+    color: #fff;
+    background-color: #00659c;
+}
+
+.from-to #convert-icon {
+    font-size: 20px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.from-to #convert-icon:hover {
+     color: #00659c;
+}
+
+.convert {
+    margin-top: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    background-color: #00659c;
+}
+
+.convert:hover {
+    background-color: #014a42;
+}
+
+.convert.disabled {
+    background-color: #a8a8a8;
+    cursor: not-allowed;
+}
+
+.credits {
+    text-align: center;
+    font-size: 12px;
+    color: #c3c3c3;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
